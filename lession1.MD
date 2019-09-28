@@ -1,4 +1,3 @@
-
 # An Toàn bảo mật thông tin
 ## 1. Prime Numbers
 ## 2. Greatest common divisor
@@ -47,3 +46,28 @@ if v(i-1) > 0
     return v(i-1)
 else return n+v(i+1)
 ```
+ **E.G** : N = 43, a = 11, find a^-1 on **Z43**.
+ 
+ Fast exponent algorithm: 
+> How to compute a^m mod n quickly ?
+
+Input: a,m and n
+Output : a^m mod n
+
+Solution: 
+
+* Represent m in binary form m = b(k)b(k-1)..b(1)b(0) (*chiều từ thấp đến cao*)
+* j = 0, ret = a;
+* then excecute the following peseudo code:
+```ruby
+while k >= j
+    if b(k) == 1
+        ret = (ret * a) mod n;
+    end
+    a = (a*a) mod n;
+    j += 1
+end
+```
+ 
+ 
+ 
